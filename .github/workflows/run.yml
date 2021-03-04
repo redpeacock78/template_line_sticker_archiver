@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: 00 02 * * *
-  push:
-    branches:
-      - master
 
 jobs:
   run:
