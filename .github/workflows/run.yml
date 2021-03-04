@@ -16,6 +16,8 @@ jobs:
           node-version: '14'
       - name: Setup Enviroments
         run: ./.github/setup.sh
+      # Usage: ./.github/sticker.sh [SEARCH_WORD...]
+      #        ./.github/sticker.sh --author [AUTHOR_ID...]
       - name: LINE Stickers Download
         run: ./.github/sticker.sh ${{ secrets.SEARCH_WORDS }}
       - name: Get Date
@@ -24,7 +26,7 @@ jobs:
         env:
           TZ: 'Asia/Tokyo'
       - name: Archive Release
-        run: ./.github/archive.sh ${{ steps.archive_date.outputs.date }}
+        run: ./.github/archive.sh release-${{ steps.archive_date.outputs.date }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1.0.0
