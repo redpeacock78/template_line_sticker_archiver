@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 sudo apt-get update &&
-    sudo apt-get install -y software-properties-common &&
-    sudo apt-get update &&
     sudo apt-get install -y \
         gconf-service \
         libasound2 \
