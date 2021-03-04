@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-apt update &&
+apt-get update &&
     apt-get install -y software-properties-common &&
     add-apt-repository non-free &&
-    apt update &&
+    apt-get update &&
     apt-get install -y \
         gconf-service \
         libasound2 \
