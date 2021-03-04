@@ -2,7 +2,6 @@
 
 sudo apt-get update &&
     sudo apt-get install -y software-properties-common &&
-    sudo add-apt-repository non-free &&
     sudo apt-get update &&
     sudo apt-get install -y \
         gconf-service \
