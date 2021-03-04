@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-apt-get update &&
-    apt-get install -y software-properties-common &&
-    add-apt-repository non-free &&
-    apt-get update &&
-    apt-get install -y \
+sudo apt-get update &&
+    sudo apt-get install -y software-properties-common &&
+    sudo add-apt-repository non-free &&
+    sudo apt-get update &&
+    sudo apt-get install -y \
         gconf-service \
         libasound2 \
         libatk1.0-0 \
@@ -44,7 +44,7 @@ apt-get update &&
         wget \
         rar \
         libgbm-dev &&
-    apt-get clean all &&
-    rm -rf /var/lib/apt/lists/* &&
+    sudo apt-get clean all &&
+    sudo rm -rf /var/lib/apt/lists/* &&
     npm install puppeteer &&
     npm install -g line-sticker-downloder
