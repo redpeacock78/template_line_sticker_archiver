@@ -39,7 +39,7 @@ function download_stickers_data() {
     mkdir stickers &&
         sort <.github/list.txt |
         uniq |
-            xargs -P4 -I@ bash -c 'node .github/dl.js "@" 2>/dev/null && echo "🙌  Success: @" || echo "❌  False: @"'
+            xargs -P4 -I@ bash -c 'node .github/dl.js stickers "@" 2>/dev/null && echo "🙌  Success: @" || echo "❌  False: @"'
 }
 
 {
