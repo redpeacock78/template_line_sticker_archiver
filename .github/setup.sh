@@ -43,5 +43,4 @@ sudo apt-get update &&
         libgbm-dev &&
     sudo apt-get clean all &&
     sudo rm -rf /var/lib/apt/lists/* &&
-    npm install puppeteer &&
-    npm install -g line-sticker-downloder
+    npm install puppeteer lsdl-wrapper
