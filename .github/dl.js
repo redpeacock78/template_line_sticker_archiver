@@ -1,7 +1,8 @@
 const lsdl = require('lsdl-wrapper');
 const puppeteer = require('puppeteer');
 
-const URL = process.argv[2];
+const dir = process.argv[2];
+const URL = process.argv[3];
 const lsdl_opts = {};
 
 const launch_opts = [
@@ -61,9 +62,9 @@ const get_option = async (URL) => {
 (async () => {
     const auto_lsdl_opt = await get_option(URL);
     if (auto_lsdl_opt === true) {
-        lsdl(URL, "stickers");
+        lsdl(URL, dir);
     } else if (auto_lsdl_opt != false) {
-        lsdl(URL, "stickers", auto_lsdl_opt);
+        lsdl(URL, dir, auto_lsdl_opt);
     } else {
         process.on("exit", () => {
             process.exit(1);
